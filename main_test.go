@@ -68,7 +68,7 @@ func TestSumDurations(t *testing.T) {
 func TestParseDuration(t *testing.T) {
 	tests := []struct {
 		name        string
-		test_string string
+		testString string
 		want        Duration
 	}{
 		{"1y2m", "1y2m", Duration{1, 2}},
@@ -79,7 +79,7 @@ func TestParseDuration(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got, _ := ParseDuration(tt.test_string); got != tt.want {
+			if got, _ := ParseDuration(tt.testString); got != tt.want {
 				t.Errorf("got %v, want %v", got, tt.want)
 			}
 		})
